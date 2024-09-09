@@ -71,6 +71,9 @@ audioElement.addEventListener("timeupdate", ()=>{
     }
     
     // Update Seekbar
+    // sdsfsfsefesdfcs
+    // sfsfesfesfe
+    // sgffgefefe
     progress = parseInt((audioElement.currentTime/audioElement.duration) * 100);
     myProgressBar.value = progress;
 
