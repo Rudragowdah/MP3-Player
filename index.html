@@ -9,7 +9,7 @@
 <body>
     <nav>
         <ul>
-            <li class="brand"><img src="logo.png" alt="Spotify">Spotify</li>
+            <li class="brand"><i class="fa-solid logo fa-music"></i>MP3 Player</li>
             <li>Home</li>
             <li>About</li>
         </ul>
@@ -21,37 +21,57 @@
             <div class="songItemContainer">
                 <div class="songItem">
                     <img class = "coverimg1" src="images/1.jpg" alt="1">
-                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09</span> <i id="0" class="fa-regular songItemPlay fa-circle-play"></i></span>
+                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09</span> <i id="0" class="fa-regular songItemPlay fa-2x fa-circle-play"></i></span>
                 </div>
                 <div class="songItem">
                     <img class = "coverimg1" src="images/1.jpg" alt="2">
-                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09 </span><i  id="1" class="fa-regular songItemPlay fa-circle-play"></i></span>
+                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09 </span><i  id="1" class="fa-regular songItemPlay  fa-2x fa-circle-play"></i></span>
                 </div>
                 <div class="songItem">
                     <img class = "coverimg1" src="images/1.jpg" alt="3">
-                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09 </span><i  id="2" class="fa-regular songItemPlay fa-circle-play"></i></span>
+                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09 </span><i  id="2" class="fa-regular songItemPlay  fa-2x fa-circle-play"></i></span>
                 </div>
                 <div class="songItem">
                     <img class = "coverimg1" src="images/1.jpg" alt="4">
-                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09 </span><i  id="3" class="fa-regular songItemPlay fa-circle-play"></i></span>
+                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09 </span><i  id="3" class="fa-regular songItemPlay fa-2x  fa-circle-play"></i></span>
                 </div>
                 <div class="songItem">
                     <img class = "coverimg1" src="images/1.jpg" alt="5">
-                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09 </span><i  id="4" class="fa-regular songItemPlay fa-circle-play"></i></span>
+                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09 </span><i  id="4" class="fa-regular songItemPlay  fa-2x fa-circle-play"></i></span>
                 </div>
                 <div class="songItem">
                     <img class = "coverimg1" src="images/1.jpg" alt="6">
-                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09 </span><i  id="5" class="fa-regular songItemPlay fa-circle-play"></i></span>
+                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09 </span><i  id="5" class="fa-regular songItemPlay  fa-2x fa-circle-play"></i></span>
                 </div>
                 <div class="songItem">
                     <img class = "coverimg1" src="images/1.jpg" alt="7">
-                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09 </span><i  id="6" class="fa-regular songItemPlay fa-circle-play"></i></span>
+                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09 </span><i  id="6" class="fa-regular songItemPlay  fa-2x fa-circle-play"></i></span>
                 </div>
+                <div class="songItem">
+                    <img class = "coverimg1" src="images/2.jpg" alt="8">
+                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09 </span><i  id="7" class="fa-regular songItemPlay  fa-2x fa-circle-play"></i></span>
+                </div>
+                <div class="songItem">
+                    <img class = "coverimg1" src="images/2.jpg" alt="9">
+                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09 </span><i  id="8" class="fa-regular songItemPlay  fa-2x fa-circle-play"></i></span>
+                </div>
+                <div class="songItem">
+                    <img class = "coverimg1" src="images/2.jpg" alt="10">
+                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09 </span><i  id="9" class="fa-regular songItemPlay  fa-2x fa-circle-play"></i></span>
+                </div>
+                <div class="songItem">
+                    <img class = "coverimg1" src="images/3.jpg" alt="11">
+                    <span class="songName">Kalki Theme Song</span><span class="songlistplay"><span class="timestamp">03:09 </span><i  id="10" class="fa-regular songItemPlay  fa-2x fa-circle-play"></i></span>
+                </div>
+                
             </div>
         </div>
         <div class="songBanner"></div>
     </div>
     <div class="bottom">
+        <div class="songInfo">
+            <img src="playing.gif" width="42px" id="gif"><span id="masterSongName">Theme of Kalki</span></img>
+        </div>
         <input type="range" name="range" id="myProgressBar" min="0" max="100" value="0" ><br>
         <div class="icons">
             <p id="bottomCurrentDuration">00:00</p>
@@ -61,9 +81,7 @@
             <i class="fa-solid fa-3x fa-forward-fast" id="next"></i>
 
         </div>
-        <div class="songInfo">
-            <img src="playing.gif" width="42px" id="gif"><span id="masterSongName">Theme of Kalki</span></img>
-        </div>
+       
     </div>
     <script src="https://kit.fontawesome.com/1dfc2c827d.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>

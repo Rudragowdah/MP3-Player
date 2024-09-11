@@ -46,12 +46,16 @@ nav ul li {
     padding: 20px;
     /* background-image: url(bg.jpg); */
 }
+.logo {
+    margin: 0 10px;
+}
 
 .brand {
     display: flex;
     align-items: center;
     font-weight: bolder;
     font-size: 1.3rem;
+    /* mix-blend-mode: multiply; */
 }
 
 .bottom {
@@ -135,17 +139,6 @@ i {
     transition: opacity 0.5s ease-in;
 }
 
-@media only screen and (max-width: 1000px) {
-    /* body {
-      background-color: ;
-    } */
-    .backgroundImg {
-        visibility: collapse;
-    }
-    div.songItem {
-        width: auto;
-    }
-  }
 
 #bottomTotalDuration {
     position: absolute;
@@ -167,5 +160,117 @@ i {
 #masterSongName {
     position: relative;
     left: 10vw;
-
+    font-size: 1.5rem;
 }
+
+@media only screen and (max-width: 900px) {
+    /* body {
+      background-color: ;
+    } */
+
+    /* .container {
+        width: 90%;
+    } */
+    
+    .songList {
+        width: 100%;
+    }
+
+    .coverimg1 {
+        width: 10vw;
+        height: 5vh;
+    }
+
+    .backgroundImg {
+        visibility: collapse;
+    }
+    div.songItem {
+        width: auto;
+    }
+  }
+
+
+  @media only screen and (max-width: 750px) {
+    /* body {
+      background-color: ;
+    } */
+
+    .container {
+        width: 85%;
+    }
+    
+    .songList {
+        width: 100%;
+    }
+
+    .coverimg1 {
+        width: 10vw;
+        height: 5vh;
+    }
+
+    .backgroundImg {
+        visibility: collapse;
+    }
+    div.songItem {
+        width: auto;
+    }
+  }
+  @media only screen and (max-width: 650px) {
+   
+
+    .container {
+        width: 85%;
+    }
+    
+    .songList {
+        width: 100%;
+    }
+
+    .coverimg1 {
+        width: 10vw;
+        height: 5vh;
+    }
+
+    .backgroundImg {
+        visibility: collapse;
+    }
+    div.songItem {
+        width: auto;
+    }
+  }
+
+  @media only screen and (max-width: 650px) {
+   
+    #masterSongName {
+        font-size: 1rem;
+        top: -2.5vh;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+   
+    #masterSongName {
+        font-size: 1rem;
+        top: -2.5vh;
+    }
+    .songItemPlay {
+        position: relative;
+        margin-right: -11vw;
+    }
+  }
+
+
+  
+  @media (min-width: 900px) and (max-width: 1200px) {
+    
+    /* .backgroundImg {
+        width: 30vw;
+    }  */
+     .container {
+        width: 85vw;
+     }
+     .songItem {
+        position: relative;
+        width: 41vw;
+    }
+  }

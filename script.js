@@ -21,7 +21,11 @@ let songs = [
     {songName:"Bhairava Anthem", filePath:"songs/4.mp3", coverPath:"images/1.jpg", duration:"02:43 "},
     {songName:"Ta Takkara Takka Takkara", filePath:"songs/5.mp3", coverPath:"images/1.jpg", duration:"02:39 "},
     {songName:"Introducing Ashwatthama", filePath:"songs/6.mp3", coverPath:"images/1.jpg", duration:"01:09 "},
-    {songName:"Kalki 2898 AD Glimpse", filePath:"songs/7.mp3", coverPath:"images/1.jpg", duration:"01:15 "}
+    {songName:"Kalki 2898 AD Glimpse", filePath:"songs/7.mp3", coverPath:"images/1.jpg", duration:"01:15 "},
+    {songName:"Sooreede", filePath:"songs/8.mp3", coverPath:"images/2.jpg", duration:"03:18 "},
+    {songName:"Prathikadalo", filePath:"songs/9.mp3", coverPath:"images/2.jpg", duration:"03:07 "},
+    {songName:"Sound of Salaar", filePath:"songs/10.mp3", coverPath:"images/2.jpg", duration:"02:55 "},
+    {songName:"Fear of Devara", filePath:"songs/11.mp3", coverPath:"images/3.jpg", duration:"03:16 "}
 ];
 
 songItems.forEach((element, i)=>{
@@ -42,17 +46,20 @@ masterPlay.addEventListener('click', ()=>{
         masterPlay.classList.remove('fa-circle-play');
         masterPlay.classList.add('fa-circle-pause');
         gif.style.opacity = 1;
+        document.getElementById(songIndex).classList.add('fa-circle-pause');
+        // console.log(currentSong);
+        // console.log(currentSong.classList)//.remove('fa-circle-pause');
+        //currentSong.classList//.add('fa-circle-play');
+        document.getElementById(songIndex).classList.remove('fa-circle-play');
     }
     else {
         audioElement.pause();
         masterPlay.classList.remove('fa-circle-pause');
         masterPlay.classList.add('fa-circle-play');
         gif.style.opacity = 0;
-
+        makeAllPlays();
     }
 })
-
-// audioElement.play();
 
 audioElement.addEventListener("timeupdate", ()=>{
     let currentTime = parseInt(audioElement.currentTime);
@@ -71,9 +78,6 @@ audioElement.addEventListener("timeupdate", ()=>{
     }
     
     // Update Seekbar
-    // sdsfsfsefesdfcs
-    // sfsfesfesfe
-    // sgffgefefe
     progress = parseInt((audioElement.currentTime/audioElement.duration) * 100);
     myProgressBar.value = progress;
 
@@ -98,10 +102,22 @@ const makeAllPlays = ()=>{
         })
 }
 
+const makeAllPause = ()=>{
+    Array.from(document.getElementsByClassName("songItemPlay")).forEach((element)=>{
+        element.classList.remove('fa-circle-play');
+        element.classList.add('fa-circle-pause');
+        })
+}
+
 Array.from(document.getElementsByClassName("songItemPlay")).forEach((element)=>{
     element.addEventListener('click',(e)=>{
-        // if() 
-        console.log(e);
+
+        console.log(e.target.classList);
+
+        // console.log(e);
+        // console.log(element);
+        let id = element.id;
+        console.log(id);
         songIndex = parseInt(e.target.id);
         makeAllPlays();
         e.target.classList.remove("fa-circle-play");
@@ -132,11 +148,14 @@ document.getElementById('previous').addEventListener('click',()=>{
     audioElement.play();
     masterPlay.classList.remove('fa-circle-play');
     masterPlay.classList.add('fa-circle-pause');
+    makeAllPlays();
+    document.getElementById(songIndex).classList.add('fa-circle-pause');
+    document.getElementById(songIndex).classList.remove('fa-circle-play');
 })
 
 
 document.getElementById('next').addEventListener('click',()=>{
-    if(songIndex>=9) {
+    if(songIndex>=10) {
         songIndex = 0;
     }
     else {
@@ -149,6 +168,9 @@ document.getElementById('next').addEventListener('click',()=>{
     audioElement.play();
     masterPlay.classList.remove('fa-circle-play');
     masterPlay.classList.add('fa-circle-pause');
+    makeAllPlays();
+    document.getElementById(songIndex).classList.add('fa-circle-pause');
+    document.getElementById(songIndex).classList.remove('fa-circle-play');
 })
 
 
