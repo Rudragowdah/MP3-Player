@@ -128,6 +128,10 @@ i {
     cursor: pointer;
 }
 
+.icons a {
+    margin-left: 5vw;
+}
+
 .songInfo {
     position: absolute;
     left: 10vw;
@@ -274,3 +278,14 @@ i {
         width: 41vw;
     }
   }
+
+  /* nav ul li a {
+    margin-right: 1vw;
+    right: 0vw;
+    text-decoration: none;
+    color: white;
+  }
+
+  nav ul li a:hover{
+    color: rgb(234, 0, 255);
+  } */

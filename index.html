@@ -10,8 +10,9 @@
     <nav>
         <ul>
             <li class="brand"><i class="fa-solid logo fa-music"></i>MP3 Player</li>
-            <li>Home</li>
-            <li>About</li>
+            <!-- <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#ContactMe">Contact</a></li> -->
         </ul>
     </nav>
     <div class="container">
@@ -72,13 +73,16 @@
         <div class="songInfo">
             <img src="playing.gif" width="42px" id="gif"><span id="masterSongName">Theme of Kalki</span></img>
         </div>
-        <input type="range" name="range" id="myProgressBar" min="0" max="100" value="0" ><br>
+        <input type="range" name="range" id="myProgressBar" value="0" min="0" max="100"  ><br>
         <div class="icons">
             <p id="bottomCurrentDuration">00:00</p>
             <p id="bottomTotalDuration">03:09</p>
             <i class="fa-solid fa-3x fa-backward-fast" id="previous"></i>
             <i class="fa-regular fa-3x fa-circle-play" id="masterPlay"></i>
             <i class="fa-solid fa-3x fa-forward-fast" id="next"></i>
+            <a href="songs/1.mp3" id="download" download>
+                <i class="fa-solid fa-3x fa-circle-down"></i>
+            </a>
 
         </div>
        
