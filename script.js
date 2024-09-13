@@ -14,8 +14,6 @@ let bottomCurrentDuration = document.getElementById("bottomCurrentDuration");
 let download = document.getElementById("download");
 
 
-// console.log(timestamp);
-
 let songs = [
     {songName:"Theme of Kalki", filePath:"songs/1.mp3", coverPath:"images/1.jpg", duration:"03:09 "},
     {songName:"Bujji Theme", filePath:"songs/2.mp3", coverPath:"images/1.jpg", duration:"00:46 "},
@@ -67,12 +65,8 @@ Array.from(document.getElementsByClassName("songItemPlay")).forEach((element)=>{
     element.addEventListener('click',(e)=>{
         let id = element.id;
         songIndex = parseInt(e.target.id);
-        // makeAllPlays();
-        // audioElement.src = `songs/${songIndex+1}.mp3`;
         masterSongName.innerText = songs[songIndex].songName;
         bottomTotalDuration.innerText = songs[songIndex].duration;
-        // audioElement.currentTime = 0;
-        // audioElement.play();
         if(audioElement.paused || audioElement.currentTime<=0) {
         audioElement.src = `songs/${songIndex+1}.mp3`;
         audioElement.play();
